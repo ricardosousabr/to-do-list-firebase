@@ -1,7 +1,9 @@
+import Form from "@/src/components/Form/idenx";
+
 export default function Home() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <Form />
     </div>
   );
 }

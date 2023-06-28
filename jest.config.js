@@ -8,6 +8,6 @@ const config = {
       statements: -10,
     },
   },
-};
+}
 
-module.exports = config;
+module.exports = config

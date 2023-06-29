@@ -1,9 +1,14 @@
-import Form from "@/src/components/Form/idenx";
+import Form from '../src/components/Form'
 
 export default function Home() {
   return (
     <div>
-      <Form />
+      <div>
+        <h1>Adicionar usuario</h1>
+      </div>
+      <div>
+        <Form />
+      </div>
     </div>
-  );
+  )
 }

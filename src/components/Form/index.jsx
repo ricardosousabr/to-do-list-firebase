@@ -16,7 +16,7 @@ export default function Form() {
 
   function sendData() {
     if (valueInput != '') {
-      set(ref(database, 'task/' + 1), {
+      set(ref(database, 'tasks/'), {
         task: valueInput
       })
     } else {

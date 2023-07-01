@@ -1,24 +1,32 @@
 import { useState } from 'react'
 
 import { initializeApp } from 'firebase/app'
-import { getDatabase, ref, set } from 'firebase/database'
 import firebaseConfig from '../../../firebase/config.js'
+import { getFirestore, addDoc, collection } from "firebase/firestore";
 
 export default function Form() {
   const [valueInput, setValueInput] = useState('')
   const app = initializeApp(firebaseConfig)
-  const database = getDatabase()
+  const db = getFirestore(app);
 
   function handleSubmit(e) {
     e.preventDefault()
     sendData()
+    setValueInput('')
   }
 
-  function sendData() {
+  async function sendData() {
+    const task = {
+      message: valueInput
+    }
     if (valueInput != '') {
-      set(ref(database, 'tasks/'), {
-        task: valueInput
-      })
+
+      const docRef = await addDoc(collection(db, "cities"), {
+        first: "Ada",
+        last: "Lovelace",
+        born: 1815
+      });
+      console.log("Document written with ID: ", docRef.id);
     } else {
       alert('Preencha todos os campos')
     }

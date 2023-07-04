@@ -20,12 +20,7 @@ export default function Form() {
       message: valueInput
     }
     if (valueInput != '') {
-
-      const docRef = await addDoc(collection(db, "cities"), {
-        first: "Ada",
-        last: "Lovelace",
-        born: 1815
-      });
+      const docRef = await addDoc(collection(db, "tasks"), task);
       console.log("Document written with ID: ", docRef.id);
     } else {
       alert('Preencha todos os campos')

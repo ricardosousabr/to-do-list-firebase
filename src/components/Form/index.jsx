@@ -12,12 +12,12 @@ export default function Form() {
   function handleSubmit(e) {
     e.preventDefault()
     sendData()
-    setValueInput('')
   }
 
   async function sendData() {
     const task = {
-      message: valueInput
+      message: valueInput,
+      status: 'incomplete'
     }
     if (valueInput != '') {
       const docRef = await addDoc(collection(db, "tasks"), task);

@@ -1,12 +1,12 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB2AQeczhoyNP6gfOxtNzn389y1JsiRuLE",
-  authDomain: "to-do-list-7768e.firebaseapp.com",
-  projectId: "to-do-list-7768e",
-  storageBucket: "to-do-list-7768e.appspot.com",
-  messagingSenderId: "941736009144",
-  appId: "1:941736009144:web:2b764227a70e475356834d",
-  measurementId: "G-ZYQR8K77T3"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 }
 
 

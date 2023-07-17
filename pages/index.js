@@ -1,5 +1,5 @@
 import Form from '../src/components/Form'
-import List from '../src/components/List'
+import List from '../src/components/List/index'
 
 export default function Home() {
   return (

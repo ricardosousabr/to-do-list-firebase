@@ -7,6 +7,7 @@ export default function List() {
   const app = initializeApp(firebaseConfig)
   const db = getFirestore(app);
   const [taskList, setTaskList] = useState([])
+  const [currentStatus, setCurrentStatus] = useState("")
 
   useEffect(() => {
     const q = query(collection(db, "tasks"));
@@ -23,9 +24,15 @@ export default function List() {
   })
 
   async function updateStatus(task) {
+    if (task.status == "complete") {
+      setCurrentStatus("incomplete")
+    } else {
+      setCurrentStatus("complete")
+    }
+
     const washingtonRef = doc(db, "tasks", task.id);
     await updateDoc(washingtonRef, {
-      status: "complete"
+      status: currentStatus
     });
   }
 

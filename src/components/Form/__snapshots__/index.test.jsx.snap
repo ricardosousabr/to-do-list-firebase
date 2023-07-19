@@ -4,9 +4,15 @@ exports[`renders homepage unchanged 1`] = `
 <div>
   <div>
     <div>
-      <h1>
-        Helllllo
-      </h1>
+      <form>
+        <input
+          type="text"
+          value=""
+        />
+        <button>
+          click
+        </button>
+      </form>
     </div>
   </div>
 </div>

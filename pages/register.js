@@ -1,10 +1,10 @@
-import RigisterUserB from '../src/components/RigisterUser'
+import RigisterUser from '../src/components/RigisterUser'
 
 export default function register() {
   return (
     <>
       <div>
-        <RigisterUserB />
+        <RigisterUser />
       </div>
     </>
   )

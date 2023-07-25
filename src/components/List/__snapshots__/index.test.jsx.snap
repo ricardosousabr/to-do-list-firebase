@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`render to-do list 1`] = `
+<div>
+  <ul />
+</div>
+`;
+
 exports[`renders homepage unchanged 1`] = `
 <div>
   <ul />
